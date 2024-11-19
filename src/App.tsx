@@ -15,14 +15,19 @@ import SignupPage from './Pages/SignupPage';
 function App() {
   return (
     <div>
-      <Router>
+      <Router
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
-          <Route path="/user/seller" element={<Seller />} />
-          <Route path="/user/distributor" element={<Distributor />} />
-          <Route path="/user/customer" element={<Customer />} />
+          <Route path="/user/seller/*" element={<Seller />} />
+          <Route path="/user/distributor/*" element={<Distributor />} />
+          <Route path="/user/customer/*" element={<Customer />} />
         </Routes>
       </Router>
     </div>
