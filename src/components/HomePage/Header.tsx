@@ -19,14 +19,15 @@ export default function Header() {
           <a href="#features" className="text-gray-600 hover:text-blue-600">Features</a>
           <a href="#about" className="text-gray-600 hover:text-blue-600">About</a>
           <a href="#pricing" className="text-gray-600 hover:text-blue-600">Pricing</a>
-          <button className="text-gray-600 hover:text-blue-600">Login</button>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
+          <a href='/login'>
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+              Login
+            </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -42,13 +43,16 @@ export default function Header() {
             <a href="#features" className="text-gray-600 hover:text-blue-600">Features</a>
             <a href="#about" className="text-gray-600 hover:text-blue-600">About</a>
             <a href="#pricing" className="text-gray-600 hover:text-blue-600">Pricing</a>
-            <button className="text-gray-600 hover:text-blue-600">Login</button>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-              Get Started
-            </button>
+
+            <a href='/login'>
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                Login
+              </button>
+            </a>
           </div>
         </div>
-      )}
-    </header>
+      )
+      }
+    </header >
   );
 }

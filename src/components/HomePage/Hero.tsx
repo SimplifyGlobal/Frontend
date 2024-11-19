@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
@@ -16,13 +15,12 @@ export default function Hero() {
               Join thousands of businesses expanding globally with confidence.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-lg">
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full hover:bg-blue-50 transition-colors text-lg">
-                Watch Demo
-              </button>
+              <a href='/login'>
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-lg">
+                  Get Started
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </a>
             </div>
           </div>
           <div className="flex-1">
