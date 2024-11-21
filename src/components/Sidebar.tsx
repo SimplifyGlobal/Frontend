@@ -1,33 +1,18 @@
 // import React from 'react';
-import {
-  LayoutDashboard,
-  Package,
-  MessageSquare,
-  Star,
-  Settings,
-  LogOut
-} from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { LogOut } from 'lucide-react';
 
-const menuItems = [
-  { icon: LayoutDashboard, label: 'Dashboard', path: '/user/customer' },
-  { icon: Package, label: 'Orders', path: '/user/customer/orders' },
-  { icon: MessageSquare, label: 'Support', path: '/user/customer/support' },
-  { icon: Star, label: 'Feedback', path: '/user/customer/feedback' },
-  { icon: Settings, label: 'Settings', path: '/user/customer/settings' },
-];
-
-export default function Sidebar() {
+export default function Sidebar({ menu, visiblity }: any) {
   const location = useLocation();
 
   return (
-    <div className="hidden lg:flex flex-col w-64 bg-white border-r border-gray-200 h-screen">
-      <div className="p-5 border-b border-gray-200">
+    <div className={`${visiblity} lg:flex flex-col w-64 bg-white border-r border-gray-200 h-screen`} >
+      <div className="p-5 border-gray-200">
         <h1 className="text-xl font-bold text-gray-800">TradePortal</h1>
       </div>
       <nav className="flex-1 overflow-y-auto">
         <ul className="p-4 space-y-2">
-          {menuItems.map((item) => {
+          {menu.map((item: any) => {
             const Icon = item.icon;
             const isActive = location.pathname === item.path;
             return (
@@ -53,6 +38,6 @@ export default function Sidebar() {
           <span className="font-medium">Logout</span>
         </button>
       </div>
-    </div>
+    </div >
   );
 }

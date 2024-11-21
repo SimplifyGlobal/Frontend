@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { Package, ChevronRight } from 'lucide-react';
-import { statusConfig } from '../../utils/statusConfig';
+import { statusConfig } from '../../../../Data/statusConfig';
 
 const orders = [
   {

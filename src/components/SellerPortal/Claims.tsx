@@ -1,5 +1,9 @@
-import React from 'react';
-import { AlertTriangle, Clock, CheckCircle } from 'lucide-react';
+// import React from 'react';
+import {
+  AlertTriangle,
+  // Clock, 
+  // CheckCircle 
+} from 'lucide-react';
 
 const Claims = () => {
   const claims = [
@@ -45,11 +49,10 @@ const Claims = () => {
                   Related to Order: {claim.orderId}
                 </p>
               </div>
-              <span className={`px-3 py-1 text-sm font-medium rounded-full ${
-                claim.status === 'Resolved' 
-                  ? 'bg-green-100 text-green-800' 
-                  : 'bg-yellow-100 text-yellow-800'
-              }`}>
+              <span className={`px-3 py-1 text-sm font-medium rounded-full ${claim.status === 'Resolved'
+                ? 'bg-green-100 text-green-800'
+                : 'bg-yellow-100 text-yellow-800'
+                }`}>
                 {claim.status}
               </span>
             </div>
